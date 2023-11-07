@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/image 8.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/airlines.css" />
+    <title>Contato</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <span class="text-success">Via</span>Vem
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-stream navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Destino.html">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Promoções.html">Promoções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Airlines.html">Airlines</a>
+              </li>
+            </ul>
+            <div class="header_right">
+              <div class="text-lg-end">
+                <span class="text-success">Fale</span> Conosco
+                <span class="phone_no">(79)9821-12123</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <!--container-->
+
+        <form class="form-group">
+          <!--form-->
+          <h1 class="text-center">Airline ViaVem</h1>
+
+          <div id="form">
+            <!--form-->
+            <h3 class="text-white">Cadastro</h3>
+
+            <div id="input">
+              <!--input-->
+              <input type="text" id="input-group" placeholder="De" />
+              <input type="text" id="input-group" placeholder="Para" />
+              <input type="text" id="input-group" placeholder="Data de Saida" />
+              <input
+                type="text"
+                id="input-group"
+                placeholder="Data de Chegada"
+              />
+              <select id="input-group" style="background: wheat">
+                <option value="">Aeroportos</option>
+                <option value="">Toronto Pearson</option>
+                <option value="">Chhatrapati Shivaji Maha</option>
+                <option value="">London City Airport</option>
+              </select>
+              <select id="input-group" style="background: wheat">
+                <option value="">Preferências</option>
+                <option value="">Classe Economica</option>
+                <option value="">Primeira Classe</option>
+              </select>
+            </div>
+            <!--input-->
+
+            <div id="input2">
+              <!--input2-->
+              <input type="number" id="input-group" placeholder="Adulto" />
+              <input
+                type="number"
+                id="input-group"
+                placeholder="Criança(2-11anos)"
+              />
+              <input
+                type="number"
+                id="input-group"
+                placeholder="infantil(dois anos)"
+              />
+            </div>
+            <!--input2-->
+
+            <div id="input3">
+              <!--input3-->
+              <span id="input-group" class="text-red"
+                >Selecione seu tipo de viagem</span
+              >
+              <input type="radio" id="input-group" name="r" />
+              <label class="text-white" for="input-group">Ida e volta</label>
+              <input type="radio" id="input-group" name="r" />
+              <label class="text-white" for="input-group"
+                >Passeio Turistico</label
+              >
+            </div>
+            <!--input3-->
+
+            <div id="input4">
+              <!--input4-->
+              <input
+                type="text"
+                id="input-group"
+                placeholder="Data de Retorno"
+              />
+
+              <input
+                type="text"
+                id="input-group1"
+                placeholder="Comentário extra"
+              />
+            </div>
+            <!--input4-->
+
+            <div id="input5">
+              <!--input5-->
+              <h3 class="text-white">Passagem</h3>
+            </div>
+            <!--input5-->
+
+            <div id="input6">
+              <!--input6-->
+
+              <input type="number" id="input-group" placeholder="id Passagem" />
+              <input
+                type="number"
+                id="input-group1"
+                placeholder="id do Titular"
+              />
+            </div>
+            <!--input6-->
+            <button type="submit" class="btn btn-warning text-white">
+              Submit Form
+            </button>
+            <button type="reset" class="btn btn-sucess">Clear Form</button>
+          </div>
+          <!--form-->
+        </form>
+        <!--form-->
+      </div>
+      <!--container-->
+    </main>
+    <footer>
+      <section id="about" class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12 bg">
+              <div class="about-img">
+                <img
+                  src="assets/images/rolling-suitcase-into-hotel.jpg"
+                  alt="travel"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+              <div class="about-text">
+                <h2 class="text-white">
+                  Nós temos o melhor serviço
+                  <span class="text-success">acredite!</span>
+                </h2>
+                <p class="text-secondary">Sempre pensando em você!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid bg-dark text-light footer pt-1 mt-1">
+          <div class="container py-5">
+            <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">
+                  ViaVem <i class="fa fa-plane" aria-hidden="true"></i>
+                </h4>
+                <a href="#" class="btn btn-link text-white"
+                  >Endereço <i class="fa fa-map" aria-hidden="true"></i
+                ></a>
+                <a href="#" class="btn btn-link text-white"
+                  >Contato <i class="fa fa-whatsapp" aria-hidden="true"></i
+                ></a>
+                <a href="#" class="btn btn-link text-white"
+                  >Termos e Condições</a
+                >
+                <a href="#" class="btn btn-link text-white">FAQ & HELP</a>
+              </div>
+              <div class="col lg-3 col-md-6">
+                <h4 class="text-white mb-3">Sede</h4>
+                <p class="mb-2">
+                  <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                  São Cristovão-SE
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

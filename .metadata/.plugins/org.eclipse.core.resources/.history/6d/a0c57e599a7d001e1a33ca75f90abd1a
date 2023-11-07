@@ -1,0 +1,89 @@
+package controller;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+
+import dao.PassagensDao;
+import models.Passagens;
+import models.Aeroportos;
+
+@WebServlet(urlPatterns = { "/passagem", "/passagem-create","/passagem-edit", "/passagem-update", "/passagem-delete"})
+public class PassagensController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       PassagensDao pdao = new PassagensDao();
+       Passagens passagem = new Passagens();
+ 
+    public PassagensController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String action = request.getServletPath();
+
+		switch (action) {
+		case "/passagem":
+			read(request, response);
+			break;
+		case "/passagem-delete":
+			create(request, response);
+			break;
+		case "/passagem-create":
+			update(request, response);
+			break;
+		case "/passagem-edit":
+			delete(request, response);
+			break;
+		case "/passagem-update":
+			update(request, response);
+			break;
+		default:
+			response.sendRedirect("index.html");
+			break;
+		}
+	}
+	protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Passagens> lista = pdao.read();
+
+		request.setAttribute("listaPassagens", lista);
+
+		RequestDispatcher rd = request.getRequestDispatcher("./views/passagens/index.jsp");
+		rd.forward(request, response);
+	}
+	protected void create(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		passagem.setNome(request.getParameter("nome"));
+		 String dateStringOne = request.getParameter("dataDeChegada");
+		 String dateStringTwo = request.getParameter("dataDeSaida");
+		 String dateStringThree = request.getParameter("dataDeRetorno");
+		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		  try {
+			  	Date dataDeChegada = sdf.parse(dateStringOne);
+		        Date dataDeSaida = sdf.parse(dateStringTwo);
+		        Date dataDeRetorno = sdf.parse(dateStringThree);
+		        
+		        passagem.setDataDeChegada(dataDeChegada);
+		        passagem.setDataDeSaida(dataDeSaida); // Assuming you have a setDateoftravel method in Usuarios class
+		        passagem.setDataDeRetorno(dataDeRetorno); // Assuming you have a setDateofreturn method in Usuarios class
+		    } catch (Exception e) {
+		       
+		    }
+		  passagem.setPreco(Float.parseFloat(request.getParameter("preco")));
+		int id_aeroporto = Integer.parseInt(request.getParameter("id_aeroporto"));
+		Aeroportos aeroportos = new Aeroportos();
+		passagens.setId(id_passagem);
+		usuario.setPassagens(passagens);
+		udao.create(usuario);
+		response.sendRedirect("usuario");
+	}
+
+}

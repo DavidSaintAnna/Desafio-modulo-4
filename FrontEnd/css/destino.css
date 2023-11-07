@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --color-star: #198754;
+}
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.packages .card {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 1) 0px 4px 12px;
+}
+
+.packages .card img {
+  border-radius: 5px;
+}
+.packages .card .card-body {
+  background: transparent;
+}
+
+.packages .card .card-body h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.packages .card .card-body p {
+  font-size: 15px;
+}
+.checked {
+  color: var(--color-star);
+}
+.packages .card .card-body h6 {
+  font-size: 20px;
+}

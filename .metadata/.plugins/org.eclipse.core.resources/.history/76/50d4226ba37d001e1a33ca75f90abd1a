@@ -1,0 +1,49 @@
+package controller;
+import java.util.List;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+
+import dao.AeroportoDAO;
+import models.Aeroportos;
+
+@WebServlet(urlPatterns = { "/aeroporto", "/aeroporto-create", "/aeroporto-edit", "/aeroporto-update", "/aeroporto-delete" })
+public class AeroportosController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+   
+    public AeroportosController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String action = request.getServletPath();
+		switch(action) {
+		case "/aeroporto":
+			read(request,response);
+			break;
+		case "/aeroporto-delete":
+			delete(request, response);
+			break;
+		case "/aeroporto-create":
+			create(request, response);
+			break;
+		case "/aeroporto-edit":
+			edit(request, response);
+			break;
+		case "/usuario-update":
+			update(request, response);
+			break;
+		
+		default:
+				response.sendRedirect("index.html");
+			break;
+	}
+	}
+
+}

@@ -1,0 +1,64 @@
+package controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+
+import dao.PassagensDao;
+import models.Passagens;
+import models.Aeroportos;
+/**
+ * Servlet implementation class PassagensController
+ */
+@WebServlet(urlPatterns = { "/passagem", "/passagem-create","/passagem-edit", "/passagem-update", "/passagem-delete"})
+public class PassagensController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       PassagensDao pdao = new PassagensDao();
+       Passagens passagem = new Passagens();
+ 
+    public PassagensController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String action = request.getServletPath();
+
+		switch (action) {
+		case "/passagem":
+			read(request, response);
+			break;
+		case "/passagem-delete":
+			create(request, response);
+			break;
+		case "/passagem-create":
+			update(request, response);
+			break;
+		case "/passagem-edit":
+			delete(request, response);
+			break;
+		case "/passagem-update":
+			update(request, response);
+			break;
+		default:
+			response.sendRedirect("index.html");
+			break;
+		}
+	}
+	protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Passagens> lista = pdao.read();
+
+		request.setAttribute("listaPassagens", lista);
+
+		RequestDispatcher rd = request.getRequestDispatcher("./views/passagens/index.jsp");
+		rd.forward(request, response);
+	}
+
+}
