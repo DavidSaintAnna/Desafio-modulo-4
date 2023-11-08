@@ -16,12 +16,6 @@
 			<h1>Criar Usuario</h1>
 		</header>
 		
-		<jsp:include page="../../components/menu.jsp">
-			<jsp:param name="home" value="../../index.jsp" />
-			<jsp:param name="usuarios" value="usuario" />
-			<jsp:param name="passagens" value="passagem" />
-			<jsp:param name="aeroportos" value="aeroporto" />
-		</jsp:include>
 		
 		<div class="container py-3">
             <form action="../../usuario-create">
@@ -49,7 +43,7 @@
 	            
 	             <div class="form-group mb-3">
 	                <label for="id_passagem" class="form-label">
-	                    Passagem
+	                    Informe o id existente da Passagem da qual esse usuário possui
 	                </label>
 	                <input type="text" id="id_passagem" name="id_passagem" class="form-control" value="" />
 	            </div>
@@ -67,11 +61,7 @@
 		
     </main>
     
-	<footer>
-		<img
-			src="../../assets/img/recode.svg"
-			alt="recodePro" />
-	</footer>
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

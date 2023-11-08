@@ -16,12 +16,6 @@
 			<h1>Criar Aeroporto</h1>
 		</header>
 		
-		<jsp:include page="../../components/menu.jsp">
-			<jsp:param name="home" value="../../index.jsp" />
-			<jsp:param name="usuarios" value="usuario" />
-			<jsp:param name="passagens" value="passagem" />
-			<jsp:param name="aeroportos" value="aeroporto" />
-		</jsp:include>
 		
 		<div class="container py-3">
             <form action="../../aeroporto-create">
@@ -60,11 +54,7 @@
 		
     </main>
     
-	<footer>
-		<img
-			src="../../assets/img/recode.svg"
-			alt="recodePro" />
-	</footer>
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
